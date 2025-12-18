@@ -98,8 +98,8 @@ src="https://www.facebook.com/tr?id=388740758596592&ev=PageView&noscript=1"
   <section class="relative bg-[#DCAF26] flex flex-col items-center justify-start overflow-visible pb-0">
 
     <!-- Top Blue Bar -->
-    <div class="w-full bg-blue-600 text-white text-sm sm:text-base text-center py-1 sm:py-3 relative z-10">
-      Trusted by 51,000+ exporters, importers & Fortune 500 companies | Demo slots filling fast for October
+    <div id="monthBanner" class="w-full bg-blue-600 text-white text-sm sm:text-base text-center py-1 sm:py-3 relative z-10">
+      Trusted by 51,000+ exporters, importers & Fortune 500 companies | Demo slots filling fast for <span id="currentMonth"></span>
     </div>
 
     <!-- Logo + Attention Bar -->
@@ -1958,6 +1958,12 @@ src="https://www.facebook.com/tr?id=388740758596592&ev=PageView&noscript=1"
   setInterval(showNextSlide, 2300); // Change every 2.3 seconds
 </script>
 
+<script>
+  const Month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const date = new Date();
+  const currentMonth = Month[date.getMonth()];
+  document.getElementById("currentMonth").innerText = currentMonth;
+</script>
 </body>
 
 </html>
